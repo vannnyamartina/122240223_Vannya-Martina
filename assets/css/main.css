@@ -5525,3 +5525,40 @@ body .page-title .title-wrapper h1 {
 .starter-page-page .page-title {
   --warna-bawah: #eef5fc;
 }
+@media (max-width: 767px) {
+  /* header: teks email dan telepon disembunyikan, ikonnya tetap */
+  .header .social-links .mailname,
+  .header .social-links .callname {
+    display: none;
+  }
+
+  .header .social-links a {
+    padding: 0 6px;
+  }
+
+  .header .logo img.logo-img {
+    height: 42px;
+    max-height: 42px;
+  }
+
+  .logo-kanan {
+    height: 42px;
+    margin-left: 8px;
+    margin-right: 44px;
+  }
+
+  /* footer: logo lebih kecil dan semuanya di tengah */
+  .logo-footer {
+    height: 56px;
+  }
+
+  .footer .footer-brand {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer .footer-brand .logo,
+  .footer .social-links {
+    justify-content: center;
+  }
+}
