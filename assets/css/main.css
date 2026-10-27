@@ -4962,7 +4962,7 @@ html {
       rgba(255, 255, 255, 0.55) 0%,
       rgba(255, 255, 255, 0.70) 60%,
       rgba(255, 255, 255, 1) 100%),
-    url("../img/pabrik.jpg");
+    url("../img/PABRIK.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -4973,7 +4973,7 @@ html {
       rgba(255, 255, 255, 0.50) 35%,
       rgba(255, 255, 255, 0.85) 65%,
       rgba(255, 255, 255, 1) 100%),
-    url("../img/pabrik.jpg");
+    url("../img/PABRIK.jpg");
   background-size: cover;
   background-position: center top;
   padding-top: 40px;
@@ -5052,7 +5052,7 @@ body {
 .page-title {
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 1)),
-    url("../img/pabrik.jpg");
+    url("../img/PABRIK.jpg");
   background-size: cover;
   background-position: center;
   padding: 60px 0 80px;
