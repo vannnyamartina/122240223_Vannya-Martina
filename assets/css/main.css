@@ -5526,7 +5526,6 @@ body .page-title .title-wrapper h1 {
   --warna-bawah: #eef5fc;
 }
 @media (max-width: 767px) {
-  /* header: teks email dan telepon disembunyikan, ikonnya tetap */
   .header .social-links .mailname,
   .header .social-links .callname {
     display: none;
@@ -5560,5 +5559,24 @@ body .page-title .title-wrapper h1 {
   .footer .footer-brand .logo,
   .footer .social-links {
     justify-content: center;
+  }
+}
+#featured-services .f-icon {
+  background: #0b5ca8;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  #hero {
+    background-image:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0.50) 35%,
+        rgba(255, 255, 255, 0.85) 65%,
+        rgba(255, 255, 255, 1) 100%),
+      url("../img/pabrik.jpg");
+    background-size: 100% 600px, auto 600px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
   }
 }
