@@ -362,6 +362,23 @@
     window.addEventListener('scroll', cekMenuAktif);
     window.addEventListener('load', cekMenuAktif);
     cekMenuAktif();
+    
+    /* geser ke bagian struktur: saat menu diklik, atau saat halaman dibuka dari halaman lain */
+    function keStruktur() {
+      var posisi = bagianStruktur.getBoundingClientRect().top + window.scrollY - 110;
+      window.scrollTo(0, posisi);
+    }
+
+    linkStruktur.addEventListener('click', function (e) {
+      e.preventDefault();
+      keStruktur();
+    });
+
+    window.addEventListener('load', function () {
+      if (window.location.hash === '#struktur-organisasi') {
+        setTimeout(keStruktur, 400);
+      }
+    });
   </script>
 </body>
 
