@@ -210,23 +210,7 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
-  }
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  } 
 }
 
 /* Navmenu - Mobile */
@@ -307,17 +291,9 @@ h6 {
     color: var(--contrast-color);
     transform: rotate(180deg);
   }
-
-  
-
-  
-
-  
-
   .mobile-nav-active {
     overflow: hidden;
   }
-
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
@@ -448,12 +424,6 @@ h6 {
   .footer .footer-cta {
     margin-bottom: 40px;
   }
-
-  
-
-  
-
-  
 }
 
 /*--------------------------------------------------------------
@@ -949,11 +919,7 @@ section,
 
   .features .feature-item .f-icon i {
     font-size: 20px;
-  }
-
-  
-
-  
+  }  
 }
 
 /*--------------------------------------------------------------
@@ -1288,11 +1254,6 @@ section,
     margin: 0;
   }
 
-  /* Dropdown menu */
-  
-  
-  
-
   /* Hero */
   #hero {
     background-color: #ffffff;
@@ -1330,10 +1291,6 @@ section,
   #featured-services .service-item .icon i {
     color: #ffffff;
   }
-    /* Kotak logo di bagian About */
-  
-  
-  
 .features .feature-grid {
   max-width: 1000px;
   margin: 0 auto;
