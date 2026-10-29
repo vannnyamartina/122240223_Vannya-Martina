@@ -1591,33 +1591,18 @@ body .page-title .title-wrapper h1 {
   margin: 0;
   line-height: 1.7;
 }
-
 .garis-waktu {
   list-style: none;
   margin: 0 0 30px;
-  padding: 0 0 0 30px;
-  border-left: 4px solid #1e88e5;
+  padding: 0;
 }
 
 .garis-waktu li {
-  position: relative;
   margin-bottom: 20px;
   padding: 18px 22px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(11, 61, 117, 0.08);
-}
-
-.garis-waktu li::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 24px;
-  width: 16px;
-  height: 16px;
-  background-color: #e31e24;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
 }
 
 .garis-waktu .tahun {
@@ -1636,7 +1621,6 @@ body .page-title .title-wrapper h1 {
   margin: 0;
   line-height: 1.7;
 }
-
 .bahan-baku {
   padding: 24px 28px;
   background: linear-gradient(135deg, #0b5ca8, #1e88e5);
