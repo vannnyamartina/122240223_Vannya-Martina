@@ -1906,3 +1906,26 @@ body .page-title .title-wrapper h1 {
       url("../img/PABRIK.jpg");
   }
 }
+.header .navmenu li a.menu-tombol {
+  background-color: #0b5ca8;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+.header .navmenu li a.menu-tombol:hover,
+.header .navmenu li a.menu-tombol:focus {
+  background-color: #e31e24;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .header .navmenu li a.menu-tombol {
+    margin: 8px 20px;
+    justify-content: center;
+  }
+}
+.index-page .navmenu a[href="index.html"] {
+  color: var(--nav-hover-color);
+}

@@ -63,12 +63,13 @@
     <div class="nav-wrap">
       <div class="container d-flex justify-content-center position-relative">
         <nav id="navmenu" class="navmenu">
-           <ul>
-            <li><a href="index.html" class="active">Beranda</a></li>
-          <li><a href="portfolio-details.html">Profil Perusahaan</a></li>
-          <li><a href="service-details.html">Proses Produksi</a></li>
-            <li><a href="starter-page.html">Karir</a></li>
-            </li>
+          <ul>
+              <li><a href="index.html" class="active">Beranda</a></li>
+              <li><a href="portfolio-details.html">Profil Perusahaan</a></li>
+              <li><a href="service-details.html">Proses Produksi</a></li>
+              <li><a href="starter-page.html">Karir</a></li>
+              <li><a href="index.html#contact" class="menu-tombol">Kontak & Lokasi</a></li>
+            </ul>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -571,6 +572,18 @@
 
     window.open(alamat, '_blank');
     form.reset();
+  });
+
+  function namaFile(alamat) {
+    return alamat.split('/').pop() || 'index.html';
+  }
+
+  document.querySelectorAll('.navmenu a').forEach(function (link) {
+    if (!link.hash && namaFile(link.pathname) === namaFile(location.pathname)) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
+    }
   });
 </script>
 </body>

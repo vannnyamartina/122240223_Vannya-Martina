@@ -54,12 +54,13 @@
     <div class="nav-wrap">
       <div class="container d-flex justify-content-center position-relative">
         <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="portfolio-details.html">Profil Perusahaan</a></li>
-            <li><a href="service-details.html">Proses Produksi</a></li>
-            <li><a href="starter-page.html" class="active">Karir</a></li>
-            </li>
+         <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="portfolio-details.html">Profil Perusahaan</a></li>
+              <li><a href="service-details.html">Proses Produksi</a></li>
+              <li><a href="starter-page.html" class="active">Karir</a></li>
+              <li><a href="index.html#contact" class="menu-tombol">Kontak & Lokasi</a></li>
+            </ul>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -391,6 +392,27 @@
 
       posisiTerakhir = posisiSekarang;
     });
-  </script>
+        var menuBeranda = document.querySelector('.navmenu a[href="index.html"]');
+    var menuKontak = document.querySelector('.navmenu a[href="index.html#contact"]');
+    var bagianKontak = document.querySelector('#contact');
+
+    function sorotMenu() {
+      var diKontak = bagianKontak.getBoundingClientRect().top <= window.innerHeight / 2;
+      menuKontak.classList.toggle('active', diKontak);
+      menuBeranda.classList.toggle('active', !diKontak);
+    }
+
+  function namaFile(alamat) {
+    return alamat.split('/').pop() || 'index.html';
+  }
+
+  document.querySelectorAll('.navmenu a').forEach(function (link) {
+    if (!link.hash && namaFile(link.pathname) === namaFile(location.pathname)) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
+    }
+  });
+</script>
 </body>
 </html>
