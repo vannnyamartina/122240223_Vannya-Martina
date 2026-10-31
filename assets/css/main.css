@@ -1854,9 +1854,12 @@ body .page-title .title-wrapper h1 {
 }
 .service-details-page .page-title::after {
   height: 120px;
-}.starter-page-page .page-title {
-  padding-bottom: 50px;
+}
+.starter-page-page .page-title {
+  padding-top: 90px;
+  padding-bottom: 30px;
 }
 .starter-page-page .page-title::after {
   height: 120px;
 }
+
