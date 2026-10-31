@@ -467,6 +467,32 @@
 
   </footer>
 
+    <!-- Pratinjau pesan sebelum dikirim -->
+  <div class="modal fade" id="modal-konfirmasi" tabindex="-1" aria-labelledby="judul-konfirmasi" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="judul-konfirmasi">Periksa Pesan Anda</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-secondary mb-0">Nama</p>
+          <p class="fw-bold" id="ringkas-nama"></p>
+          <p class="small text-secondary mb-0">Email</p>
+          <p class="fw-bold text-break" id="ringkas-email"></p>
+          <p class="small text-secondary mb-0">Subjek</p>
+          <p class="fw-bold text-break" id="ringkas-subjek"></p>
+          <p class="small text-secondary mb-0">Pesan</p>
+          <p class="mb-0 text-break" id="ringkas-pesan"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Kembali Edit</button>
+          <button type="button" class="btn btn-danger" id="tombol-kirim">Kirim Sekarang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -511,27 +537,40 @@
       posisiTerakhir = posisiSekarang;
     });
   </script>
-  <script>
+ <script>
   var form = document.querySelector('#form-kontak');
-  var pesan = document.querySelector('#pesan-form');
+  var tujuan = 'integrated.balongan@pertamina.com';
 
+  /* peringatan berbahasa Indonesia */
+  form.addEventListener('invalid', function (e) {
+    var kolom = e.target;
+
+    if (kolom.validity.valueMissing) {
+      kolom.setCustomValidity('Kolom ini wajib diisi.');
+    } else if (kolom.validity.typeMismatch || kolom.validity.patternMismatch) {
+      kolom.setCustomValidity('Masukkan email yang valid, contoh: nama@email.com');
+    }
+  }, true);
+
+  form.addEventListener('input', function (e) {
+    e.target.setCustomValidity('');
+  });
+
+  /* klik Kirim Pesan: buka Gmail dengan isi yang sudah terisi */
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function (respon) {
-      if (respon.ok) {
-        form.reset();
-        pesan.textContent = 'Terima kasih, pesan Anda sudah terkirim.';
-      } else {
-        pesan.textContent = 'Maaf, pesan gagal terkirim. Silakan coba lagi.';
-      }
-    }).catch(function () {
-      pesan.textContent = 'Maaf, pesan gagal terkirim. Silakan coba lagi.';
-    });
+    var isi = 'Nama: ' + form.elements['name'].value + '\n' +
+              'Email: ' + form.elements['email'].value + '\n\n' +
+              form.elements['message'].value;
+
+    var alamat = 'https://mail.google.com/mail/?view=cm&fs=1' +
+                 '&to=' + encodeURIComponent(tujuan) +
+                 '&su=' + encodeURIComponent(form.elements['subject'].value) +
+                 '&body=' + encodeURIComponent(isi);
+
+    window.open(alamat, '_blank');
+    form.reset();
   });
 </script>
 </body>
