@@ -1862,4 +1862,34 @@ body .page-title .title-wrapper h1 {
 .starter-page-page .page-title::after {
   height: 120px;
 }
+/* formulir kontak */
+.contact .php-email-form .form-control {
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .php-email-form .form-control:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .php-email-form .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contact .php-email-form button[type="submit"] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
 
