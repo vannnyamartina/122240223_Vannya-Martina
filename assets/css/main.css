@@ -1823,3 +1823,40 @@ body .page-title .title-wrapper h1 {
     background-color: #ffffff;
   }
 }
+@media (min-width: 768px) {
+  .teks-justify {
+    text-align: justify;
+  }
+}
+.contact .info-item p a {
+  color: #ffffff;
+}
+.contact .info-item p a:hover {
+  text-decoration: underline;
+}
+.portfolio-details-page .page-title {
+  padding-bottom: 50px;
+}
+.portfolio-details-page .page-title::after {
+  height: 120px;
+}
+.portfolio-details-page .page-title {
+  padding-bottom: 50px;
+}
+.portfolio-details-page .page-title::after {
+  height: 120px;
+}
+.teks-justify {
+  text-align: justify;
+}
+.service-details-page .page-title {
+  padding-bottom: 50px;
+}
+.service-details-page .page-title::after {
+  height: 120px;
+}.starter-page-page .page-title {
+  padding-bottom: 50px;
+}
+.starter-page-page .page-title::after {
+  height: 120px;
+}
