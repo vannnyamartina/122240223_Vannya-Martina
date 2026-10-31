@@ -1895,4 +1895,14 @@ body .page-title .title-wrapper h1 {
 #ringkas-pesan {
   white-space: pre-line;
 }
-
+@media (max-width: 767px) {
+  #hero {
+    background-image:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.60) 40%,
+        rgba(255, 255, 255, 0.90) 80%,
+        rgba(255, 255, 255, 1) 100%),
+      url("../img/PABRIK.jpg");
+  }
+}
